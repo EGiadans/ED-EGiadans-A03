@@ -68,21 +68,21 @@ class Secuencial: Busquedas { //Algoritmo de busqueda secuencial
 
 class Binaria: Busquedas {
     override func fetch(n: Int) -> Int { //Implementacion de nuestro "metodo abstracto"
-        var centro: Int = 0
+        var centro: Int = 0 //Variables con los limites de nuestra busqueda
         var inicio: Int = 0
         var fin: Int = self.vector.count-1
-        
-        while(inicio<=fin){
-            centro=(inicio+fin)/2
-            
-            if(self.vector[centro]==n) {
-                return centro
+        var valCentro;
+        while(inicio<=fin){ //Mientras que inicio sea menor que fin se hara la busqueda
+            centro=(inicio+fin)/2//Se calcula la posicion del centro
+            valCentro = self.vector[centro]
+            if(valCentro == n) {   //Si en este centro se encuentra el valor
+                return centro //regresa posicion del centro 
             }
             
-            if(n < self.vector[centro]) {
-                fin = centro-1
+            if(n < valCentro) { //Si el numero es menor que el valor del centro
+                fin = centro - 1 //Ahora el fin sera el valor del centro menos 1
             } else {
-                inicio = centro+1
+                inicio = centro + 1 //De otro modo el inicio sera el valor del centro mas 1
             }
         }
         return -1
