@@ -13,15 +13,15 @@ import java.util.Random;
  * @author Eduardo
  */
 public abstract class Busquedas {
-    protected int[] vector;
+    protected int[] vector; //Se establece el atributo heredable de la clase
     
-    abstract public int fetch(int p);
+    abstract public int fetch(int p); //Metodo abstracto para la propia busqueda
     
-    public void setV( int[]v ){
+    public void setV( int[]v ){ //Setter para el vector
         this.vector = v;
     }
     
-    public int[] randomV(int n) {
+    public int[] randomV(int n) { //Creacion del vector con numeros Random
         Random rnd = new Random();
         int[] v = new int[n];
         for (int i=0;i<v.length;i++){
@@ -30,17 +30,17 @@ public abstract class Busquedas {
         return v;
     }
     
-    public int[] getV(){
+    public int[] getV(){ //Getter para el vector
         return vector;
     }
     
-    public void showV(){
+    public void showV(){ //Mostrar valor de cada posicion del arreglo 
         for(int i=0;i<vector.length;i++){
             System.out.println("El valor en la posicion "+i+" es : "+vector[i]);
         }
     }
     
-    public void showF(int p ){
+    public void showF(int p ){ //Muestra la posicion del numero deseado, recibiendo como parametro el numero
         System.out.println("La posicion del numero deseado es: "+p);
     }
 }
