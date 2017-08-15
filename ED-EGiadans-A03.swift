@@ -48,7 +48,7 @@ class Busquedas {
     
     
     func showF(p: Int) { //Muestra la posicion del numero deseado
-        print("El numero se encuentra en la posición \(n)")
+        print("El numero se encuentra en la posición " + p)
     }
     
 }
@@ -92,6 +92,6 @@ class Binaria: Busquedas {
 
 
 var os: secuencial = secuencial()
-os.setV(v: test.randomV(n: 5))
+os.setV(v: os.randomV(n: 5))
 os.showV()
-os.showF(n: test.fetch(n: 20))
+os.showF(p: os.fetch(p: 20))
