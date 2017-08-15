@@ -22,7 +22,7 @@ public class Binaria extends Busquedas{
             centro = (inicio+fin)/2; //Se calcula la posicion del centro
             valorCentro = vector[centro]; //Se posiciona en en el vector          
             if (valorCentro == p){ //Si en este centro se encuentra el valor
-                return valorCentro; //regresa el valor del centro 
+                return centro; //regresa posicion del centro 
             } else {
                 if (p < valorCentro) { //Si el numero es menor que el valor del centro
                     fin = centro - 1; //Ahora el fin sera el valor del centro menos 1
