@@ -34,4 +34,27 @@ public class Binaria extends Busquedas{
         return -1;
     }
     
+    
+    /**
+     *
+     * @param v
+     */
+    @Override
+    public void seleccion(int[] v) {
+        int menor, auxiliar;
+        
+        for (int i=0; i<v.length;i++){
+             menor = i;
+             for (int j = i+1;j<v.length;j++) {
+                 if ( v[j] < v[menor] ) {
+                     menor = j;
+                 }
+             }
+             auxiliar = v[i];
+             v[i] = v[menor];
+             v[menor] = auxiliar;
+        }
+    }
+    
+    
 }
