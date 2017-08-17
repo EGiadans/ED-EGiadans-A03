@@ -18,7 +18,7 @@ public class Binaria extends Busquedas{
         inicio = 0; //inicializa
         fin = vector.length - 1; //declarar valor de var Fin como tamaño del arreglo menos 1
         
-        while (inicio<fin){ //Mientras que inicio sea menor que fin se hara la busqueda
+        while (inicio<=fin){ //Mientras que inicio sea menor que fin se hara la busqueda
             centro = (inicio+fin)/2; //Se calcula la posicion del centro
             valorCentro = vector[centro]; //Se posiciona en en el vector          
             if (valorCentro == p){ //Si en este centro se encuentra el valor
