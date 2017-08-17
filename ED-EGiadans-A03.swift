@@ -72,7 +72,7 @@ class Binaria: Busquedas {
         var inicio: Int = 0
         var fin: Int = self.vector.count-1
         var valCentro;
-        while(inicio<=fin){ //Mientras que inicio sea menor que fin se hara la busqueda
+        while(inicio<=fin) { //Mientras que inicio sea menor que fin se hara la busqueda
             centro=(inicio+fin)/2//Se calcula la posicion del centro
             valCentro = self.vector[centro]
             if(valCentro == n) {   //Si en este centro se encuentra el valor
@@ -87,6 +87,14 @@ class Binaria: Busquedas {
         }
         return -1
     }
+    
+    func seleccion (v: [Int]) {
+        var menor
+        var auxiliar
+        
+        for 
+    }
+   
 }
 
 
