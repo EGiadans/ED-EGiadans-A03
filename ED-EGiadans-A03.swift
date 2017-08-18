@@ -27,14 +27,6 @@ class Busquedas {
     }
     
     func showV() { //Se muestra el valor de cada posicion del arreglo 
-        for var i=0; i<v.count; ++i{
-            print ("El numero en la posicion " +i+ " es: "+vector[i] )
-        }
-    }
-    
-    
-    
-    /*
         let count:Int = self.vector.count-1
         var string = "["
         for(index) in 0...count{
@@ -44,7 +36,7 @@ class Busquedas {
         string = String(string.characters.dropLast()) + "]"
         print(string)
     }
-    */
+    
     
     
     func showF(p: Int) { //Muestra la posicion del numero deseado
@@ -88,11 +80,16 @@ class Binaria: Busquedas {
         return -1
     }
     
-    func seleccion (v: [Int]) {
+    func seleccion (vector: [Int]) {
         var menor
         var auxiliar
         
-        for 
+        for i in 0...count {
+            menor = i
+            for j in 1...count {
+                
+            }
+        }
     }
    
 }
