@@ -92,6 +92,24 @@ class Binaria: Busquedas {
         }
     }
    
+    func seleccion (v: [Int]) {
+	var menor: Int
+	var auxiliar: Int
+
+	for i in 0 ..< v.count {
+		menor = i 
+		for j in i+1..<v.count{
+			if v[j] < v[menor] {
+				menor = j
+			}
+		}
+		auxiliar = v[i]
+		v[i] = v[menor]
+		v[menor] = auxiliar
+        
+	}
+	
+}
 }
 
 
