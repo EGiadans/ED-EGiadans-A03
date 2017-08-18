@@ -45,6 +45,9 @@ class Busquedas {
     
 }
 
+protocol Seleccion(){
+    func seleccion()
+}
 
 class Secuencial: Busquedas { //Algoritmo de busqueda secuencial
     override func fetch(n: Int) -> Int {
@@ -58,7 +61,7 @@ class Secuencial: Busquedas { //Algoritmo de busqueda secuencial
     }
 }
 
-class Binaria: Busquedas {
+class Binaria: Busquedas,Seleccion {
     override func fetch(n: Int) -> Int { //Implementacion de nuestro "metodo abstracto"
         var centro: Int = 0 //Variables con los limites de nuestra busqueda
         var inicio: Int = 0
@@ -80,19 +83,8 @@ class Binaria: Busquedas {
         return -1
     }
     
-    func seleccion (vector: [Int]) {
-        var menor
-        var auxiliar
-        
-        for i in 0...count {
-            menor = i
-            for j in 1...count {
-                
-            }
-        }
-    }
-   
-    func seleccion (v: [Int]) {
+      
+    func seleccion (v: [Int]) { //Metodo de ordenamiento por seleccion
 	var menor: Int
 	var auxiliar: Int
 
@@ -113,8 +105,15 @@ class Binaria: Busquedas {
 }
 
 
-
 var os: secuencial = secuencial()
 os.setV(v: os.randomV(n: 5))
 os.showV()
+os.showF(p: os.fetch(p: 3))
+
+var os: binaria = binaria()
+os.setV(v: os.randomV(n: 5))
+os.showV()
+os.seleccion(v)
+os.showV()
+os.showF(p: os.fetch(p: 3))
 os.showF(p: os.fetch(p: 20))
