@@ -102,18 +102,45 @@ class Binaria: Busquedas,Seleccion {
 	}
     }
 	
-    func mergeSort(inicio: Int, fin: Int) {
-	    if (inicio<fin) {
-		    var mitad = (inicio+fin)/2
-		    mergeSort(inicio, mitad)
-            	    mergeSort(mitad + 1, fin)
-		    merge(inicio, mitad, fin)
+    func mergeSort(vector: [Int]) -> [Int] {
+	    if (vector.count <=1) {
+		    return vector
 	    }
+	    var izq: [Int] = [Int]()
+	    var der: [Int] = [Int]()
+	    
+	    for i in stride(from: 0, to (vector.count - 1), by: 1) { 
+		    if (i < (vector.count / 2) {
+			    izq.append(vector[i])
+		    } else {
+			    der.append(vector[i])
+		    }
+	    }
+		    izq = mergeSort(vector: izq)
+		    der = mergeSort(vector: der)
+		    return merge(izq: &izq, der: &der)
     }
 	
-    func merge(inicio: Int, fin: Int, fin:Int) {
-	    
-	    
+    func merge(izq: [Int], der: [Int]) -> [Int] {
+	    var res: [Int] = [Int]()
+	    while ((!izq.isEmpty)&&(!der.isEmpty)) {
+		    if (izq.first! >= der.first!) {
+			    res.append(izq.first!)
+			    izq.removeFirst()
+		    } else {
+			    result.append(der.first!)
+			    derecha.removeFirst()
+		    }
+	    }
+	    while (!izq.isEmpty) {
+		    result.append(izq.first!)
+		    izq.removeFirst()
+	    }
+	    while (!der.isEmpty) {
+		    result.append(der.first!)
+		    der.removeFirst()
+	    }
+	    return res
     }
 }
 
@@ -126,7 +153,8 @@ os.showF(p: os.fetch(p: 3))
 var os: binaria = binaria()
 os.setV(v: os.randomV(n: 5))
 os.showV()
-os.seleccion(v)
+//os.seleccion(v)
+os.mergeSort(v)
 os.showV()
 os.showF(p: os.fetch(p: 3))
 os.showF(p: os.fetch(p: 20))
