@@ -11,4 +11,5 @@ package ed.egiadans.a03;
  */
 public interface IOrdenamientos {
      public abstract void seleccion(int[] v);
+     public abstract void insercion(int[] v); 
 }
