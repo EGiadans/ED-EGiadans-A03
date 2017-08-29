@@ -100,8 +100,21 @@ class Binaria: Busquedas,Seleccion {
 		v[menor] = auxiliar
         
 	}
+    }
 	
-}
+    func mergeSort(inicio: Int, fin: Int) {
+	    if (inicio<fin) {
+		    var mitad = (inicio+fin)/2
+		    mergeSort(inicio, mitad)
+            	    mergeSort(mitad + 1, fin)
+		    merge(inicio, mitad, fin)
+	    }
+    }
+	
+    func merge(inicio: Int, fin: Int, fin:Int) {
+	    
+	    
+    }
 }
 
 
