@@ -51,7 +51,7 @@ protocol Seleccion(){
 
 class Secuencial: Busquedas { //Algoritmo de busqueda secuencial
     override func fetch(n: Int) -> Int {
-        let count:Int = self.vector.count-1 //Se establece una constante que sera el limite para la busqueda
+        let count:Int = self.vector.count //Se establece una constante que sera el limite para la busqueda
         for i in 0...count { //Desde el contador en 0 hasta cuando es 1 menor que el tamaño del arreglo 
             if(self.vector[i]==n) { //Si el numero se encuentra en esa posicion
             return i                //regresar la posicion
