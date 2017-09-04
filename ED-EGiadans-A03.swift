@@ -117,7 +117,47 @@ class Binaria: Busquedas,Seleccion {
 	    }
     }
 	
-    
+    func bubble(a:[Int]) {
+	    var temp
+	    for i in 1...a.count {
+		    for j in 0...a.count-1{
+			    if a[j]>a[j+1]{
+				    temp = a[j]
+				    a[j] = a[j+1]
+				    a[j+1] = temp
+			    }
+		    }
+	    }
+    }
+	
+    func quickSort(a:[Int],inicio:Int,fin:Int){
+	    var i = inicio
+	    var j = fin 
+	    let pivote = a[(inicio+fin)/2]
+	    var temp = 0
+	    
+	    repeat {
+		    while a[i] < pivote {
+			    i++		    
+		    }
+		    while a[j] > pivote {
+			    j--		
+		    }
+		    if i <= j {
+			    temp = a[i]
+			    a[i] = a[j]
+			    a[j] = temp
+			    i++
+			    j--
+		    }
+	    } while (i<=j)
+	    if (inicio < j) {
+		    quickSort(inicio:inicio,fin:j)
+	    }
+	    if (i < fin) {
+		    quickSort(inicio:i,fin:fin)
+	    }
+    }
 	
     func mergeSort(vector: [Int]) -> [Int] {
 	    if (vector.count <=1) {
