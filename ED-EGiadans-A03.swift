@@ -102,6 +102,23 @@ class Binaria: Busquedas,Seleccion {
 	}
     }
 	
+    func insertion(a:[Int]){
+	    var temp
+	    var j
+	    for i in 0..<a.count {
+		    temp = a[i]
+		    j=i-1
+		    
+		    while j >= 0 && a[j] > temp {
+			    a[j+1] = a[j]
+			    j--
+		    }
+		    a[j+1] = temp
+	    }
+    }
+	
+    
+	
     func mergeSort(vector: [Int]) -> [Int] {
 	    if (vector.count <=1) {
 		    return vector
